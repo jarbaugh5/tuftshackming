@@ -1,0 +1,22 @@
+{
+  "name": "tuftshackming",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jarbaugh5/tuftshackming",
+  "authors": [
+    "Jon Arbaugh <jonarbaugh@gmail.com>"
+  ],
+  "description": "Tufts second weekly hack",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "d3": "~3.4.11"
+  }
+}
