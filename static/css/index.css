@@ -1,0 +1,23 @@
+/******************************************
+*
+* Main styles
+*
+*******************************************/
+
+body {
+    background-color: #E4F1FE;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #2C3E50;
+}
+
+/*****************************************
+*
+* Line Chart
+*
+******************************************/
+
+path {
+    fill: none;
+    stroke-width: 2;
+    stroke: black;
+}
