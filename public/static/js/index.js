@@ -6,9 +6,13 @@
  * A breakdown of a tweet:
  * http://dev.twitter.com/docs/platform-objects/tweets
  */
-
 /* jshint -W117 */
-d3.json('mings_tweets.json', function (err, data) {
+
+var drawTimeseries = function (tweets) {
+    if (!tweets) {
+        return;
+    }
+
     var margin = {top: 20, right: 20, bottom: 30, left: 50},
         width = 960 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
@@ -96,4 +100,32 @@ d3.json('mings_tweets.json', function (err, data) {
             .attr('class', 'line')
             .attr('d', line);
     });
+};
+
+var drawFriends = function (tweets) {
+    if (!tweets) {
+        return;
+    }
+
+    console.log('drawFriends!');
+};
+
+var tweets = null;
+if (!tweets) {
+    d3.json('mings_tweets.json', function(err, data) {
+        tweets = data;
+        drawTimeseries(tweets);
+    });
+}
+
+$('.nav.nav-tabs li:eq(0) a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+//    drawTimeseries(tweets);
+});
+
+$('.nav.nav-tabs li:eq(1) a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+    drawFriends(tweets);
 });

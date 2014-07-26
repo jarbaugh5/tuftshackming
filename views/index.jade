@@ -1,13 +1,28 @@
 doctype html
 html(lang="en")
-	head
-		title="Ming's Tweets!"
+    head
+        title="Ming's Tweets!"
 
-		link(type="text/css", rel="stylesheet", href="static/css/index.css")
+    body
+        ul(class="nav nav-tabs" role="tablist")
+            li(class="active")
+                a(href="#timeseries" role="tab" data-toggle="tab")
+                    | Ming's Activity!
+            li
+                a(href="#friends" role="tab" data-toggle="tab")
+                    | Ming's Friends!
 
-	body
-		svg(class="chart")
+        .tab-content
+            .tab-pane.active#timeseries
+                svg(class="chart")
 
-		script(type="text/javascript", src="bower_components/jquery/dist/jquery.min.js")
-		script(type="text/javascript", src="bower_components/d3/d3.min.js")
-		script(type="text/javascript", src="static/js/index.js")
+            .tab-pane#friends
+                svg(class="chart")
+
+        link(type="text/css", rel="stylesheet", href="bower_components/bootstrap/dist/css/bootstrap.min.css")
+        link(type="text/css", rel="stylesheet", href="static/css/index.css")
+
+        script(type="text/javascript", src="bower_components/jquery/dist/jquery.min.js")
+        script(type="text/javascript", src="bower_components/bootstrap/dist/js/bootstrap.min.js")
+        script(type="text/javascript", src="bower_components/d3/d3.min.js")
+        script(type="text/javascript", src="static/js/index.js")
