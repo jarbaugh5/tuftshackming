@@ -1,0 +1,23 @@
+{
+  "name": "tuftshackming",
+  "version": "0.0.0",
+  "description": "For the second Tufts Weekly Hack. A visualization of some tweets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jarbaugh5/tuftshackming.git"
+  },
+  "author": "Jon Arbaugh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarbaugh5/tuftshackming/issues"
+  },
+  "homepage": "https://github.com/jarbaugh5/tuftshackming",
+  "dependencies": {
+    "express": "^4.6.1",
+    "jade": "^1.5.0"
+  }
+}
