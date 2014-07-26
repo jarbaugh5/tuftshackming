@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var path = require('path');
 
@@ -7,9 +9,9 @@ app.get('/', function (req, res) {
 	res.render('index.jade');
 });
 
-app.use("/", express.static(path.join(__dirname)));
+app.use('/', express.static(path.join(__dirname, '../public')));
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
-	console.log("Listening on " + port);
+	console.log('Listening on ' + port);
 });
