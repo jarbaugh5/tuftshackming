@@ -1,3 +1,4 @@
+'use strict';
 
 /*
  * data is an array of tweets
@@ -5,6 +6,8 @@
  * A breakdown of a tweet:
  * http://dev.twitter.com/docs/platform-objects/tweets
  */
+
+/* jshint -W117 */
 d3.json('mings_tweets.json', function (err, data) {
     var margin = {top: 20, right: 20, bottom: 30, left: 50},
         width = 960 - margin.left - margin.right,
@@ -18,11 +21,11 @@ d3.json('mings_tweets.json', function (err, data) {
 
     var xAxis = d3.svg.axis()
         .scale(x)
-        .orient("bottom");
+        .orient('bottom');
 
     var yAxis = d3.svg.axis()
         .scale(y)
-        .orient("left");
+        .orient('left');
 
     var line = d3.svg.line()
         .x(function (d) {
@@ -33,10 +36,10 @@ d3.json('mings_tweets.json', function (err, data) {
         });
 
     var svg = d3.select('svg.chart')
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom)
+        .append('g')
+        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
     d3.json('mings_tweets.json', function (err, data) {
         if (err) {
